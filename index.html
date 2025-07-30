@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kinyarwanda ↔ English Translator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <div class="top-bar">
+        <h1>🌍 Kinyarwanda ↔ English Translator</h1>
+        <button id="toggle-theme">🌓</button>
+      </div>
+
+      <textarea id="inputText" placeholder="Enter text in Kinyarwanda or English..."></textarea>
+
+      <div class="controls">
+        <select id="direction">
+          <option value="rw-en">Kinyarwanda to English</option>
+          <option value="en-rw">English to Kinyarwanda</option>
+        </select>
+        <button onclick="translateText()">Translate</button>
+      </div>
+
+      <div id="output" class="output-box">Your translated text will appear here...</div>
+
+      <div class="output-actions">
+        <span id="loadingSpinner" style="display:none;">🔄 Translating...</span>
+        <button id="speakBtn" onclick="speakText()">🔊 Speak</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
