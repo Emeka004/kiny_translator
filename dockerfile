@@ -1,9 +1,10 @@
-# Dockerfile
+# Use official nginx image to serve static content
 FROM nginx:alpine
 
-COPY public /usr/share/nginx/html
+# Copy custom HTML/CSS/JS into the nginx public directory
+COPY ./app /usr/share/nginx/html
 
-EXPOSE 8080
+# Expose the default nginx port
+EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
 
