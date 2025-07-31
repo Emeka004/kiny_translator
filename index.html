@@ -4,36 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kinyarwanda ↔ English Translator</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/a2e8b7f2dd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="card">
-      <div class="top-bar">
-        <h1>🌍 Kinyarwanda ↔ English Translator</h1>
-        <button id="toggle-theme">🌓</button>
-      </div>
+  <header>
+    <h1>🌍 Kinyarwanda ↔ English Translator</h1>
+    <button id="mode-toggle" title="Toggle light/dark mode"><i class="fas fa-adjust"></i></button>
+  </header>
 
-      <textarea id="inputText" placeholder="Enter text in Kinyarwanda or English..."></textarea>
-
-      <div class="controls">
-        <select id="direction">
-          <option value="rw-en">Kinyarwanda to English</option>
-          <option value="en-rw">English to Kinyarwanda</option>
+  <main>
+    <div class="translator-container">
+      <div class="language-select">
+        <label for="source-lang">From:</label>
+        <select id="source-lang">
+          <option value="rw">Kinyarwanda</option>
+          <option value="en">English</option>
         </select>
-        <button onclick="translateText()">Translate</button>
+
+        <label for="target-lang">To:</label>
+        <select id="target-lang">
+          <option value="en">English</option>
+          <option value="rw">Kinyarwanda</option>
+        </select>
       </div>
 
-      <div id="output" class="output-box">Your translated text will appear here...</div>
+      <textarea id="input-text" rows="5" placeholder="Enter your text..."></textarea>
+      <button id="translate-btn"><i class="fas fa-language"></i> Translate</button>
 
-      <div class="output-actions">
-        <span id="loadingSpinner" style="display:none;">🔄 Translating...</span>
-        <button id="speakBtn" onclick="speakText()">🔊 Speak</button>
+      <div class="output">
+        <h3>Translation:</h3>
+        <p id="translated-text">—</p>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KinyTranslate | Built with ❤️ using <a href="https://libretranslate.com/" target="_blank">LibreTranslate API</a></p>
+    <div class="socials">
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:you@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
