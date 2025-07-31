@@ -1,128 +1,152 @@
 :root {
-  --bg: #f0f0f0;
-  --card-bg: #ffffff20;
-  --text: #111;
-  --accent: #00b894;
-  --text-secondary: #333;
-  --blur: 12px;
+  --bg-color: #f9f9f9;
+  --text-color: #111;
+  --header-bg: #4caf50;
+  --footer-bg: #222;
+  --card-bg: #ffffff;
+  --accent-color: #2196f3;
+  --btn-bg: #4caf50;
+  --btn-hover: #45a049;
 }
 
-body.dark {
-  --bg: #1e1e2f;
-  --card-bg: #ffffff10;
-  --text: #f5f5f5;
-  --accent: #81ecec;
-  --text-secondary: #bbb;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --header-bg: #1f1f1f;
+  --footer-bg: #111;
+  --card-bg: #1e1e1e;
+  --accent-color: #90caf9;
+  --btn-bg: #333;
+  --btn-hover: #444;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s ease, color 0.3s ease;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
-.wrapper {
-  padding: 1em;
-  width: 100%;
-  max-width: 800px;
-}
-
-.card {
-  background: var(--card-bg);
-  backdrop-filter: blur(var(--blur));
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.top-bar {
+/* Header */
+header {
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 #toggle-theme {
-  font-size: 1.3rem;
-  border: none;
-  background: none;
   cursor: pointer;
-  color: var(--text);
+  background: none;
+  border: 2px solid var(--accent-color);
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+#toggle-theme:hover {
+  background-color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+}
+
+.translator-container {
+  max-width: 700px;
+  margin: auto;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.language-select {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.language-select label {
+  flex: 1;
+}
+
+.language-select select {
+  flex: 2;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 textarea {
   width: 100%;
-  height: 120px;
   padding: 1rem;
   font-size: 1rem;
-  border-radius: 12px;
-  border: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--text);
-  resize: none;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-textarea::placeholder {
-  color: var(--text-secondary);
-}
-
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-select, button {
-  flex: 1;
+button#translate-btn {
+  margin-top: 1rem;
+  width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
-  border-radius: 10px;
-  border: none;
-  background-color: var(--accent);
+  background-color: var(--btn-bg);
   color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #019875;
+button#translate-btn:hover {
+  background-color: var(--btn-hover);
 }
 
-.output-box {
-  min-height: 60px;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-size: 1.1rem;
-  color: var(--text);
+/* Output */
+.output {
+  margin-top: 1.5rem;
+}
+
+.output h3 {
   margin-bottom: 0.5rem;
 }
 
-.output-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#translated-text {
+  font-size: 1.1rem;
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 5px;
+  min-height: 60px;
 }
 
-#speakBtn {
-  background-color: transparent;
-  border: none;
-  color: var(--accent);
-  font-size: 1.2rem;
-  cursor: pointer;
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
 }
