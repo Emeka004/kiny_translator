@@ -61,14 +61,12 @@ http://localhost:8080
 ### 1. Build Locally
 
 ```bash
-docker build -t your-dockerhub-username/kiny-translator:v1 .
+docker build -t Emeka004/kiny-translator:v1 .
 
 
 2. Run Locally
 
-docker run -p 8080:80 your-dockerhub-username/kiny-translator:v1
-
-
+docker run -p 8080:80 Emeka004/kiny-translator:v1
 
 
 
@@ -90,7 +88,6 @@ Icons by Twemoji/Unicode Consortium
 
 📜 License
 This project is open source under the MIT License.
-
 
 
 
