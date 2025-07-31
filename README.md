@@ -1,22 +1,75 @@
-# Kinyarwanda ↔ English Translator App
+# 🌍 Kinyarwanda ↔ English Translator App
 
-A simple web app that uses the LibreTranslate API to translate between Kinyarwanda and English.
-
-## 🌐 Live Demo (via HAProxy Load Balancer)
-
-Accessible at `http://<lb01-ip>:8080`
+A clean, responsive, and easy-to-use web application that translates between **Kinyarwanda** and **English**, powered by the [LibreTranslate API](https://libretranslate.com/). Built with modern HTML, CSS, and JavaScript and deployable via Docker containers behind an HAProxy load balancer.
 
 ---
 
-## 🔧 API Used
+## 🚀 Live Demo
 
-- LibreTranslate: https://libretranslate.com/docs/
-- No API key required for public endpoint
+> Once deployed, the app will be accessible at:
+
+http://localhost:8080
+
 
 ---
 
-## 🛠 How to Run Locally
+## 🎯 Features
 
-### Build Docker Image
-```bash
-docker build -t your-dockerhub-username/kiny-translator:v1 .
+✅ Translate between Kinyarwanda and English  
+✅ Text-to-Speech output for translated text  
+✅ Beautiful glassmorphic UI with Dark/Light mode toggle  
+✅ Responsive and mobile-friendly design  
+✅ Dockerized and HAProxy-ready  
+✅ No API key required (LibreTranslate public instance)  
+
+---
+
+## 📸 Screenshots
+
+![Main UI Light Mode](screenshots/light-mode.png)  
+![Main UI Dark Mode](screenshots/dark-mode.png)
+
+---
+
+## 🔧 Tech Stack
+
+- HTML5 / CSS3 (Responsive UI)
+- JavaScript (DOM, Fetch API, TTS)
+- Docker (Nginx-based static site deployment)
+- HAProxy (Round-robin load balancer)
+- LibreTranslate API
+
+---
+
+## 🌐 API Used
+
+**LibreTranslate**
+- URL: `https://libretranslate.de/translate`
+- Method: `POST`
+- Request Example:
+  ```json
+  {
+    "q": "Ndi kubona amazi",
+    "source": "rw",
+    "target": "en",
+    "format": "text"
+  }
+
+
+🙏 Credits
+LibreTranslate API
+
+Nginx
+
+Docker
+
+HAProxy
+
+Icons by Twemoji/Unicode Consortium
+
+📜 License
+This project is open source under the MIT License.
+
+👨💻 Author
+Built by Emeka Onugha
+GitHub: github.com/Emeka004
