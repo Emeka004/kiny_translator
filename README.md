@@ -56,6 +56,23 @@ http://localhost:8080
   }
 
 
+## 🐳 Docker Instructions
+
+### 1. Build Locally
+
+```bash
+docker build -t your-dockerhub-username/kiny-translator:v1 .
+
+
+2. Run Locally
+
+docker run -p 8080:80 your-dockerhub-username/kiny-translator:v1
+
+
+
+
+
+
 🙏 Credits
 LibreTranslate API
 
@@ -67,9 +84,22 @@ HAProxy
 
 Icons by Twemoji/Unicode Consortium
 
+
+
+
+
 📜 License
 This project is open source under the MIT License.
 
+
+
+
+
+
+
+
 👨💻 Author
+
 Built by Emeka Onugha
+
 GitHub: github.com/Emeka004
