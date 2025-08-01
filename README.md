@@ -72,10 +72,10 @@ kiny_translator/
 
 ```bash
 # Build the Docker image
-docker build -t <your-dockerhub-username>/kinyarwanda-translator:v1 .
+docker build -t Emeka004/kiny_translator:v1 .
 
 # Test locally
-docker run -p 8080:80 <your-dockerhub-username>/kinyarwanda-translator:v1
+docker run -p 8080:80 Emeka004/kiny_translator:v1
 
 # Verify it works
 curl http://localhost:8080
@@ -88,15 +88,15 @@ curl http://localhost:8080
 docker login
 
 # Push the image
-docker push <your-dockerhub-username>/kinyarwanda-translator:v1
+docker push Emeka004/kiny_translator:v1
 
 # Tag as latest
-docker tag <your-dockerhub-username>/kinyarwanda-translator:v1 <your-dockerhub-username>/kinyarwanda-translator:latest
-docker push <your-dockerhub-username>/kinyarwanda-translator:latest
+docker tag Emeka004/kiny_translator:v1 Emeka004/kiny_translator:latest
+docker push Emeka004/kiny_translator:latest
 ```
 
 ### Docker Hub Repository
-- **Image Name**: `<your-dockerhub-username>/kinyarwanda-translator`
+- **Image Name**: `Emeka004/kiny_translator`
 - **Available Tags**: `v1`, `latest`
 - **Base Image**: `nginx:alpine` (lightweight, production-ready)
 - **Exposed Port**: `80`
@@ -112,9 +112,9 @@ ssh user@web-01
 ssh user@web-02
 
 # Pull and run the image
-docker pull <your-dockerhub-username>/kinyarwanda-translator:v1
+docker pull Emeka004/kiny_translator:v1
 docker run -d --name kinyarwanda-app --restart unless-stopped \
-  -p 8080:80 <your-dockerhub-username>/kinyarwanda-translator:v1
+  -p 8080:80 Emeka004/kiny_translator:v1
 
 # Verify each instance
 curl http://localhost:8080
