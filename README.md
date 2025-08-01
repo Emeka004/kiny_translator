@@ -44,7 +44,7 @@ kiny_translator/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd kinyarwanda-translator
+   cd kiny_translator
    ```
 
 2. **Run locally with Python server**
