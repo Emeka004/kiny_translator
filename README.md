@@ -23,7 +23,7 @@ A professional web application for translating between Kinyarwanda and English, 
 
 ### Project Structure
 ```
-kinyarwanda-translator/
+kiny_translator/
 ├── index.html          # Main HTML structure
 ├── style.css           # Styling and responsive design
 ├── script.js           # JavaScript logic and API integration
@@ -316,18 +316,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Kinyarwanda language community** for phrase validation
 - **Docker** and **Nginx** for reliable containerization
 
-## 📞 Support
 
-For support, please contact:
-- **Issues**: Open a GitHub issue
-- **Email**: your-email@example.com
-- **Documentation**: Check this README and inline code comments
 
 ---
 
 **Built with ❤️ for the Rwandan community and language learners worldwide.**
-
-
 
 
 
